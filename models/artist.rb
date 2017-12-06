@@ -33,6 +33,4 @@ class Artist
       return results_array.map {|album| Album.new(album)}
     end
 
-
-
 end
