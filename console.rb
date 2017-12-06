@@ -1,6 +1,8 @@
 require('pry-byebug')
 require_relative('./models/artist.rb')
 require_relative('./models/album.rb')
+Album.delete_all()
+Artist.delete_all()
 
 artist1 = Artist.new({'name' => 'Prince'})
 artist2 = Artist.new({'name' => 'Morrisey'})
@@ -42,6 +44,12 @@ artist2.update()
 
 album2.genre = '?'
 album2.update()
+
+artist2.delete()
+
+album3.delete()
+
+artist = Artist.find_by_id(artist1.id)
 
 binding.pry
 nil
