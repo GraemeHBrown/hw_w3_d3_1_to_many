@@ -50,6 +50,6 @@ artist2.delete()
 album3.delete()
 
 artist = Artist.find_by_id(artist1.id)
-
+album = Album.find_by_id(album2.id)
 binding.pry
 nil
